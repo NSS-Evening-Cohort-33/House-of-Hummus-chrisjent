@@ -1,0 +1,22 @@
+{
+  "name": "house-of-hummus-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "serve --listen ${PORT:-3000}",
+    "start-api": "json-server --watch api/database.json --port 8088",
+    "test": "cypress run",
+    "test:ci": "start-server-and-test start-server http://localhost:3000 start-api http://localhost:8088 test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "6.9.1",
+    "json-server": "^0.17.4",
+    "start-server-and-test": "^1.12.1"
+  },
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
+}
